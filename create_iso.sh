@@ -17,9 +17,6 @@ sudo mv squashfs-root edit
 sudo cp /etc/resolv.conf edit/etc/
 sudo cp /etc/hosts edit/etc/
 
-# with universe enabled
-sudo cp sources.list edit/etc/apt/
-
 # index and cache for apt, to avoid re-download every time we run the script
 mkdir index_apt
 mkdir cache_apt
