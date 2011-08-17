@@ -1,7 +1,7 @@
 # home content
-sudo chown ubuntu /root/home_asiru -R
-sudo chgrp ubuntu /root/home_asiru -R
-sudo rsync -a -r /root/home_asiru/ /home/ubuntu/
+sudo rsync -a -r /root/home_asiru/ /home/mint/
+sudo chown mint /home/mint -R
+sudo chgrp mint /home/mint -R
 
 # finish vim-debug instalation
 install-vim-debug.py
