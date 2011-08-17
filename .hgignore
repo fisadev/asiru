@@ -4,5 +4,5 @@ syntax: glob
 *.pyc
 *.swp
 *.deb
-*index-apt/*
+*index_apt/*
 *.iso
