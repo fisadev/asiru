@@ -18,7 +18,7 @@ chmod 644 /var/cache/apt/archives/*.deb
 # packages
 apt-get update
 apt-get upgrade -y
-apt-get install -y ipython bpython python-pip python-imaging winpdb
+apt-get install -y ipython bpython python-pip python-imaging winpdb gunicorn
 apt-get install -y vim vim-gtk editra ctags
 apt-get install -y mercurial subversion git tk8.5
 apt-get install -y chromium-browser vncviewer
