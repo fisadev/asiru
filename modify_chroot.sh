@@ -32,4 +32,6 @@ sudo pip install virtualenv
 sudo pip install pylint
 
 # make post_boot_actions.sh to be executed on after livecd boot
-echo "sudo sh /root/post_boot_actions.sh" >> /etc/bash.bashrc
+grep '#' /etc/rc.local > /etc/rc.local
+echo "sudo sh /root/post_boot_actions.sh" >> /etc/rc.local
+echo "exit 0" >> /etc/rc.local
