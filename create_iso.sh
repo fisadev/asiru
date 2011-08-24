@@ -24,18 +24,19 @@ sudo cp index_apt/* edit/var/lib/apt/lists/
 sudo cp cache_apt/* edit/var/cache/apt/archives/
 
 # livecd home content
-sudo cp home_asiru edit/root/ -r
+sudo mkdir -p edit/opt/asiru
+sudo cp home_asiru edit/opt/asiru/ -r
 
 # livecd post boot actions
-sudo cp post_boot_actions.sh edit/root/
+sudo cp post_boot_actions.sh edit/opt/asiru/
 # chroot actions
-sudo cp modify_chroot.sh edit/root/
-sudo cp clean_chroot.sh edit/root/
+sudo cp modify_chroot.sh edit/opt/asiru/
+sudo cp clean_chroot.sh edit/opt/asiru/
 
 sudo mount --bind /dev/ edit/dev
 
 # chroot modifications
-sudo chroot edit /bin/sh /root/modify_chroot.sh
+sudo chroot edit /bin/sh /opt/asiru/modify_chroot.sh
 
 # steal index and cache from chroot's apt, so we have it for the next time we 
 # run the script
@@ -50,7 +51,7 @@ sudo chroot edit /bin/sh -c "mkinitramfs -o /initrd.gz 2.6.38-8-generic"
 sudo mv edit/initrd.gz extract_cd/casper/
 
 echo "Cleaning chroot..."
-sudo chroot edit /bin/sh /root/clean_chroot.sh
+sudo chroot edit /bin/sh /opt/asiru/clean_chroot.sh
 sudo umount edit/dev
 
 echo "Creating filesystem manifest..."
