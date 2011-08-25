@@ -20,7 +20,7 @@ apt-get update
 apt-get upgrade -y
 apt-get install -y ipython bpython python-pip python-imaging winpdb gunicorn
 apt-get install -y vim vim-gtk editra ctags
-apt-get install -y mercurial subversion git tk8.5
+apt-get install -y mercurial subversion git tk8.5 tortoisehg tortoisehg-nautilus
 apt-get install -y chromium-browser vncviewer
 # sudo apt-get install -y wine
 
