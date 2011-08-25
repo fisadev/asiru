@@ -30,6 +30,7 @@ sudo pip install dbgp
 sudo pip install vim-debug
 sudo pip install virtualenv
 sudo pip install pylint
+sudo pip install bottle
 
 # make post_boot_actions.sh to be executed on after livecd boot
 grep '#' /etc/rc.local > /etc/rc.local
