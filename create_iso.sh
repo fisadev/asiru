@@ -81,3 +81,4 @@ sudo umount mnt
 sudo rm -rf edit extract_cd mnt
 
 echo "Asiru image ready to use!"
+notify-send "Asiru image ready to use!" -i gtk-ok
