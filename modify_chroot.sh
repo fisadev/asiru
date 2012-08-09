@@ -24,7 +24,7 @@ apt-get upgrade -y
 apt-get install -y ipython bpython python-pip python-imaging winpdb gunicorn
 apt-get install -y vim vim-gtk editra exuberant-ctags
 apt-get install -y mercurial subversion git tk8.5 tortoisehg tortoisehg-nautilus meld
-apt-get install -y chromium-browser vncviewer
+apt-get install -y chromium-browser vncviewer tmux
 # sudo apt-get install -y wine
 
 # python packages
