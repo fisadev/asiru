@@ -38,6 +38,9 @@ sudo pip install flake8
 sudo pip install pyflakes
 sudo pip install requests
 
+# finish fisa-vim-config installation
+vim +BundleInstall +qall
+
 # make post_boot_actions.sh to be executed on after livecd boot
 grep '#' /etc/rc.local > /etc/rc.local
 echo "sudo sh /opt/asiru/post_boot_actions.sh" >> /etc/rc.local
