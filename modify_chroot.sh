@@ -7,7 +7,10 @@ dbus-uuidgen > /var/lib/dbus/machine-id
 dpkg-divert --local --rename --add /sbin/initctl
 ln -s /bin/true /sbin/initctl
 
-# modified apt index and cache
+# modified apt sources, index and cache
+chown root /etc/apt/sources.list
+chgrp root /etc/apt/sources.list
+chmod 644 /etc/apt/sources.list
 chown root /var/lib/apt/lists/*
 chgrp root /var/lib/apt/lists/*
 chmod 644 /var/lib/apt/lists/*

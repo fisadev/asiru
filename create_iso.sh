@@ -1,9 +1,9 @@
 echo "Installing necesary tools on host system"
 sudo apt-get install squashfs-tools genisoimage
 
-echo "Extracting original mint image..."
+echo "Extracting original ubuntu image..."
 mkdir mnt
-sudo mount -o loop linuxmint-11-gnome-dvd-32bit.iso mnt
+sudo mount -o loop ubuntu-12.04-desktop-i386.iso mnt
 mkdir extract_cd
 rsync --exclude=/casper/filesystem.squashfs -a mnt/ extract_cd
 
@@ -17,9 +17,10 @@ sudo mv squashfs-root edit
 sudo cp /etc/resolv.conf edit/etc/
 sudo cp /etc/hosts edit/etc/
 
-# index and cache for apt, to avoid re-download every time we run the script
+# sources, index and cache for apt, to avoid re-download every time we run the script
 mkdir index_apt
 mkdir cache_apt
+sudo cp sources.list edit/etc/apt/
 sudo cp index_apt/* edit/var/lib/apt/lists/
 sudo cp cache_apt/* edit/var/cache/apt/archives/
 
