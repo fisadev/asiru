@@ -48,7 +48,7 @@ sudo cp edit/var/cache/apt/archives/*.deb cache_apt/
 echo "Chroot ready!"
 
 echo "Rebuilding initrd..."
-sudo chroot edit /bin/sh -c "mkinitramfs -o /initrd.gz 2.6.38-8-generic"
+sudo chroot edit /bin/sh -c "mkinitramfs -o /initrd.gz 3.2.0-23-generic-pae"
 sudo mv edit/initrd.gz extract_cd/casper/
 
 echo "Cleaning chroot..."
