@@ -40,6 +40,7 @@ sudo pip install requests
 
 # finish fisa-vim-config installation
 vim +BundleInstall +qall
+mv .vim /opt/asiru/home_asiru/
 
 # make post_boot_actions.sh to be executed on after livecd boot
 grep '#' /etc/rc.local > /etc/rc.local
