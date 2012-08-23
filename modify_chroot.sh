@@ -22,9 +22,9 @@ chmod 644 /var/cache/apt/archives/*.deb
 apt-get update
 apt-get upgrade -y
 apt-get install -y ipython bpython python-pip python-imaging winpdb gunicorn
-apt-get install -y vim vim-gtk editra exuberant-ctags
+apt-get install -y vim vim-gtk exuberant-ctags
 apt-get install -y mercurial subversion git tk8.5 meld
-apt-get install -y chromium-browser vncviewer tmux
+apt-get install -y chromium-browser tmux
 # sudo apt-get install -y wine
 
 # python packages
@@ -37,10 +37,16 @@ sudo pip install pep8
 sudo pip install flake8
 sudo pip install pyflakes
 sudo pip install requests
+sudo pip install fabric
 
 # finish fisa-vim-config installation
+cp /opt/asiru/home_asiru/.vimrc /root/
 vim +BundleInstall +qall
-mv .vim /opt/asiru/home_asiru/
+mv /root/.vim /opt/asiru/home_asiru/
+
+# ninja ide
+sudo dpkg -i /root/ninja-ide_2.0-all.deb
+sudo apt-get install -f
 
 # make post_boot_actions.sh to be executed on after livecd boot
 grep '#' /etc/rc.local > /etc/rc.local

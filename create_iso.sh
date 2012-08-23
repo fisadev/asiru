@@ -23,6 +23,7 @@ mkdir cache_apt
 sudo cp sources.list edit/etc/apt/
 sudo cp index_apt/* edit/var/lib/apt/lists/
 sudo cp cache_apt/* edit/var/cache/apt/archives/
+sudo cp ninja-ide_2.0-all.deb edit/root/
 
 # livecd home content
 sudo mkdir -p edit/opt/asiru
