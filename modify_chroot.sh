@@ -42,6 +42,7 @@ sudo pip install fabric
 # finish fisa-vim-config installation
 cp /opt/asiru/home_asiru/.vimrc /root/
 vim +BundleInstall +qall
+sudo rm /opt/asiru/home_asiru/.vim -rf
 mv /root/.vim /opt/asiru/home_asiru/
 
 # ninja ide
