@@ -33,12 +33,12 @@ Python interactive consoles:
 Python libraries and frameworks:
 ================================
 
- * Django: web development framework.
- * Bottle: web development microframework.
- * VirtualEnv: virtual Pyhon environments.
- * Flake8: python source code analizer (finds bugs, or signs of bad quality code) and pep8 checker (coding style guidelines for python).
- * Requests: python library to do HTTP requests the easy way.
- * Fabric: system administration tasks and ssh streaming tool for python.
+* Django: web development framework.
+* Bottle: web development microframework.
+* VirtualEnv: virtual Pyhon environments.
+* Flake8: python source code analizer (finds bugs, or signs of bad quality code) and pep8 checker (coding style guidelines for python).
+* Requests: python library to do HTTP requests the easy way.
+* Fabric: system administration tasks and ssh streaming tool for python.
 
 Useful stuff:
 =============
