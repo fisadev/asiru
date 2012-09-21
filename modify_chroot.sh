@@ -23,7 +23,7 @@ apt-get update
 apt-get upgrade -y
 apt-get install -y ipython bpython python-pip python-imaging winpdb gunicorn
 apt-get install -y vim vim-gtk exuberant-ctags
-apt-get install -y mercurial subversion git tk8.5 meld
+apt-get install -y mercurial subversion git tk8.5 meld bzr
 apt-get install -y chromium-browser tmux
 # sudo apt-get install -y wine
 
@@ -46,7 +46,7 @@ sudo rm /opt/asiru/home_asiru/.vim -rf
 mv /root/.vim /opt/asiru/home_asiru/
 
 # ninja ide
-sudo dpkg -i /root/ninja-ide_2.0-all.deb
+sudo dpkg -i /root/ninja-ide_2.1.1-all.deb
 sudo apt-get install -f
 
 # make post_boot_actions.sh to be executed on after livecd boot
