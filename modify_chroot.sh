@@ -45,8 +45,8 @@ vim +BundleInstall +qall
 sudo rm /opt/asiru/home_asiru/.vim -rf
 mv /root/.vim /opt/asiru/home_asiru/
 
-# ninja ide
-sudo dpkg -i /root/ninja-ide_2.1.1-all.deb
+# extra .deb packages to install
+sudo ls /root/manual_debs/ | xargs sudo dpkg -i
 sudo apt-get install -f
 
 # make post_boot_actions.sh to be executed on after livecd boot
