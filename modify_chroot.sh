@@ -47,6 +47,7 @@ sudo rm /opt/asiru/home_asiru/.vim -rf
 mv /root/.vim /opt/asiru/home_asiru/
 
 # extra .deb packages to install
+cd /root/manual_debs
 sudo ls /root/manual_debs/ | xargs sudo dpkg -i
 sudo apt-get install -f
 
