@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Set gnome terminal default profile colors
+Exec=sh /home/ubuntu/set_terminal_colors.sh
+X-GNOME-Autostart-enabled=true
