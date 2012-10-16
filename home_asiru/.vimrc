@@ -54,6 +54,12 @@ Bundle 'rosenfeld/conque-term'
 Bundle 'fisadev/FixedTaskList.vim'
 " Surround
 Bundle 'tpope/vim-surround'
+" Autoclose
+Bundle 'Townk/vim-autoclose'
+" Better python indentation
+Bundle 'vim-scripts/indentpython.vim--nianyang'
+" Indent text object
+Bundle 'michaeljsmith/vim-indent-object'
 
 " Bundles from vim-scripts repos
 
@@ -67,6 +73,10 @@ Bundle 'IndexedSearch'
 Bundle 'matchit.zip'
 " Gvim colorscheme
 Bundle 'Wombat'
+" Autocompletition inside search
+Bundle 'SearchComplete'
+" Yank history navigation
+Bundle 'YankRing.vim'
 
 " Installing plugins the first time
 if iCanHazVundle == 0
@@ -238,16 +248,6 @@ let g:flake8_ignore=""
 " don't let pyflakes allways override the quickfix list
 let g:pyflakes_use_quickfix = 0
 
-" autoclose (
-inoremap        (  ()<Left>
-inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
-" autoclose [
-inoremap        [  []<Left>
-inoremap <expr> ]  strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]"
-" autoclose {
-inoremap        {  {}<Left>
-inoremap <expr> }  strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}"
-
 " tabman shortcuts
 let g:tabman_toggle = 'tl'
 let g:tabman_focus  = 'tf'
@@ -273,6 +273,9 @@ set scrolloff=3
 " autocompletition of files and commands behaves like shell
 " (complete only the common part, list the options that match)
 set wildmode=list:longest
+
+" Fix to let ESC work as espected with Autoclose plugin
+let g:AutoClosePumvisible = {"ENTER": "\<C-Y>", "ESC": "\<ESC>"}
 
 " to use fancy symbols for powerline, uncomment the following line and use a
 " patched font (more info on the README.rst)
